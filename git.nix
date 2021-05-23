@@ -22,7 +22,7 @@
       ff = "merge --ff-only";
       noff = "merge --no-ff";
       fa = "fetch --all";
-      pom = "push origin main";
+      pom = "push origin master";
       ds = "diff --stat=160,120";
       dh1 = "diff HEAD~1";
 

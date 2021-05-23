@@ -11,7 +11,19 @@ in {
   home.stateVersion = "21.05";
 
   home.packages = [ ] ++ myPackages;
-
+  home.file = {
+    ".githelpers".source = ./files/githelpers.sh;
+    ".zshrc".source = ./files/zshrc;
+    ".bashrc".source = ./files/bashrc;
+    ".shell.d" = {
+      source = ./files/shell.d;
+      recursive = true;
+    };
+    ".shell.d/bin" = {
+      source = ./files/bin;
+      recursive = true;
+    };
+  };
   programs = {
     vim = {
       enable = true;
@@ -27,6 +39,7 @@ map <F2> :set number!<CR>
 imap <F2> <C-o>:set number!<CR>
 '';
     };
+
     git = import ./git.nix {inherit (vars) git_name git_email;};
   };
 }
