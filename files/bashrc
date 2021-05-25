@@ -1,4 +1,4 @@
- for x in `ls $HOME/.shell.d/*.sh`; do
+ for x in `ls $HOME/.shell.d/*.{ba,}sh`; do
    source "$x"
 done
 
