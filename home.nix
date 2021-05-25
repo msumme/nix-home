@@ -28,6 +28,9 @@ in {
     vim = {
       enable = true;
       plugins = [pkgs.vimPlugins.vim-nix];
+      settings = {
+        mouse = "a";
+      };
       extraConfig = ''
 set nocompatible
 syntax enable
