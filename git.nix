@@ -14,6 +14,7 @@
 
       st = "status";
       ci = "commit --verbose";
+      cm = "commit -m";
       co = "checkout";
       di = "diff --find-copies-harder";
       dc = "diff --find-copies-harder --cached";
