@@ -52,3 +52,4 @@ setopt promptsubst
 PS1=$'%m:%~ `vcs_info_wrapper` \n%# '
 
 setopt histverify
+setopt autocd
