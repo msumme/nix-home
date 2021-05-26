@@ -1,4 +1,0 @@
-for x in `ls $HOME/.shell.d/*.{z,}sh`; do
-  source "$x"
-done
-

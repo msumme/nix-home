@@ -13,8 +13,16 @@ in {
   home.packages = [ ] ++ myPackages;
   home.file = {
     ".githelpers".source = ./files/githelpers.sh;
-    ".zshrc".source = ./files/zshrc;
-    ".bashrc".source = ./files/bashrc;
+    ".zshrc".text = ''
+      for x in `ls $HOME/.shell.d/*.{z,}sh`; do
+        source "$x"
+      done
+    '';
+    ".bashrc".text = ''
+      for x in `ls $HOME/.shell.d/*.{ba,}sh`; do
+         source "$x"
+      done
+    '';
     ".shell.d" = {
       source = ./files/shell.d;
       recursive = true;
@@ -32,15 +40,15 @@ in {
         mouse = "a";
       };
       extraConfig = ''
-set nocompatible
-syntax enable
-set number
-set softtabstop=2 expandtab
-set incsearch
-set shiftwidth=4
-map <F2> :set number!<CR>
-imap <F2> <C-o>:set number!<CR>
-'';
+        set nocompatible
+        syntax enable
+        set number
+        set softtabstop=2 expandtab
+        set incsearch
+        set shiftwidth=4
+        map <F2> :set number!<CR>
+        imap <F2> <C-o>:set number!<CR>
+        '';
     };
 
     git = import ./git.nix {inherit (vars) git_name git_email;};
