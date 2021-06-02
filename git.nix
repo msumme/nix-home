@@ -28,6 +28,7 @@
       ds = "diff --stat=160,120";
       dh1 = "diff HEAD~1";
       remaster = "!git stash && git checkout master && git pull && git checkout - && git rebase master && git stash pop";
+      pn = "!git push --set-upstream origin $(git branch --show-current)";
 
       # Divergence (commits we added and commits remote added)
       div = "divergence";

@@ -14,3 +14,4 @@ if [[ "$platform" == "osx" ]]; then
 fi
 
 export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
+export EDITOR="vim"
