@@ -15,6 +15,7 @@
       st = "status";
       ci = "commit --verbose";
       cm = "commit -m";
+      can = "commit --amend --no-edit";
       co = "checkout";
       cob = "checkout -b";
       di = "diff --find-copies-harder";
