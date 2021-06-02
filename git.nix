@@ -14,7 +14,7 @@
 
       st = "status";
       ci = "commit --verbose";
-      cm = ''!f() { git commit -m "$*"; }; f'';
+      cm = "commit -m";
       co = "checkout";
       cob = "checkout -b";
       di = "diff --find-copies-harder";
