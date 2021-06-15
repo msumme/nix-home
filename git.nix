@@ -16,6 +16,7 @@
       ci = "commit --verbose";
       cm = "commit -m";
       can = "commit --amend --no-edit";
+      cann = "commit --amend --no-edit --no-verify";
       co = "checkout";
       cob = "checkout -b";
       di = "diff --find-copies-harder";
