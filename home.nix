@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 let
-  myPackages = (with pkgs; [ nixfmt direnv diff-so-fancy gh ]);
+  shellspec = pkgs.callPackage ./nix/shellspec.nix { pkgs = pkgs; };
+  myPackages = (with pkgs; [ nixfmt direnv diff-so-fancy gh shellspec]);
   homeDirectory = /Users/msumme;
   varFile = homeDirectory + "/hm-vars.nix";
   vars = import varFile;
