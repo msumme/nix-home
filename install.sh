@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 main() {
   check_preconditions
   install_nix_if_missing
