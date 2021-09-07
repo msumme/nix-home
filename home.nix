@@ -1,7 +1,22 @@
 { config, pkgs, ... }:
 let
   shellspec = pkgs.callPackage ./nix/shellspec.nix { pkgs = pkgs; };
-  myPackages = (with pkgs; [ nixfmt direnv diff-so-fancy gh shellspec]);
+  myPackages = (with pkgs; [ 
+    nixfmt 
+    direnv 
+    diff-so-fancy 
+    gh 
+    shellspec
+    docker
+    nodejs
+    yarn
+    zip
+    unzip
+    jq
+    wget
+
+  ]);
+# can't current install rubymine, iterm2, xcode from here
   homeDirectory = /Users/msumme;
   varFile = homeDirectory + "/hm-vars.nix";
   vars = import varFile;

@@ -62,7 +62,7 @@
       pf = "push --force-with-lease";
 
     };
-    core = { pager = "diff-so-fancy | less --tabs=4 -RFX"; };
+    # core = { pager = "diff-so-fancy | less --tabs=4 -RFX"; };
     color = { ui = "auto"; };
     "color \"diff-highlight\"" = {
       oldNormal = "red";
