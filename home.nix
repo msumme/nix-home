@@ -15,6 +15,7 @@ let
     jq
     wget
     watchman
+    bundler
   ]);
 # can't current install rubymine, iterm2, xcode from here
   homeDirectory = /Users/msumme;
