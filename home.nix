@@ -18,12 +18,12 @@ let
     bundler
   ]);
 # can't current install rubymine, iterm2, xcode from here
-  homeDirectory = /Users/msumme;
+  homeDirectory = /Users/max;
   varFile = homeDirectory + "/hm-vars.nix";
   vars = import varFile;
 in {
   programs.home-manager.enable = true;
-  home.username = "msumme";
+  home.username = "max";
   home.homeDirectory = homeDirectory;
   home.stateVersion = "21.05";
 
