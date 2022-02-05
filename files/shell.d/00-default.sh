@@ -13,5 +13,5 @@ if [[ "$platform" == "osx" ]]; then
     export JAVA_HOME="`/usr/libexec/java_home`"
 fi
 
-export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
+export JAVA_HOME=`/usr/libexec/java_home`
 export EDITOR="vim"
