@@ -34,7 +34,6 @@ install_home_manager() {
 
 link_config() {
   ln -sf "$PWD/home.nix" "$HOME/.config/nixpkgs/home.nix"
-  ln -sf "$PWD/config.nix" "$HOME/.config/nixpkgs/config.nix"
 }
 
 enable_homemanager() {
